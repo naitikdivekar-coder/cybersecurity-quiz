@@ -61,12 +61,13 @@ if st.session_state.quiz_complete:
         st.warning("⚠️ BETTER BE AWARE! Check security measures and try again.")
         
     # Reset button to start over
+        # Reset button to start over
     if st.button("Try Again"):
         st.session_state.current_question = 0
         st.session_state.score = 0
         st.session_state.quiz_complete = False
-        st.clear_cache()
         st.rerun()
+
 
 else:
     # --- ONE-BY-ONE QUESTION PAGE ---
